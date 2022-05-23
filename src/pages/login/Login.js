@@ -35,7 +35,21 @@ export default function Login() {
         />
       </label>
 
-      {!isPending && <button className="btn">Login</button>}
+      {!isPending && (
+        <>
+          <button className="btn">Login</button>
+          <button
+            className="btn"
+            style={{ marginLeft: 5 }}
+            onClick={() => {
+              setEmail("demo@gmail.com");
+              setPassword("123456");
+            }}
+          >
+            Guest User
+          </button>
+        </>
+      )}
       {isPending && (
         <button className="btn" disabled>
           loading...
