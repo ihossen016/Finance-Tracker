@@ -92,3 +92,30 @@
   font-size: 0.9em;
   cursor: pointer;
 }
+
+/* Responsive Query */
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    max-width: 700px;
+    margin: 40px auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 340px;
+    margin: 20px auto;
+  }
+  .content {
+    padding: 0;
+  }
+  .sidebar {
+    padding: 0;
+  }
+}
